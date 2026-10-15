@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Style global - Ambiance sombre et funèbre de Dark Souls */
+body.scene-background {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('assets/backgrounds/forest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c5c5c5;
+}
+
+/* Conteneur principal - Effet "Menu / Interface de jeu" */
+.game-container {
+    background-color: rgba(10, 10, 10, 0.92);
+    padding: 40px 50px;
+    border-radius: 2px; /* Les coins sont plus austères et tranchés */
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(200, 160, 80, 0.05);
+    border: 2px solid #5a4a32; /* Bordure effet métal/pierre sombre et dorure ternie */
+    position: relative;
+}
+
+/* Effet de liseré interne discret style UI de jeu */
+.game-container::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 5px; right: 5px; bottom: 5px;
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    pointer-events: none;
+}
+
+/* Titre - Style épique / prophétique */
+h1 {
+    margin-top: 0;
+    font-family: 'Cinzel', serif;
+    color: #e3c16f; /* Doré vieilli type "Feu de camp" / "Humanité" */
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #5a4a32;
+    padding-bottom: 15px;
+}
+
+/* Boîte narrative - Style "Description d'objet / Lore" */
+.narrative-box {
+    margin: 30px 0;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #b8b8b8;
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Organisation des choix */
+.choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+/* Boutons personnalisés - Style interface de sélection Dark Souls */
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(to right, #1a1a1a, #111111);
+    color: #b3a178; /* Texte couleur parchemin / vieil or */
+    padding: 14px 22px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #423524;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Effet au survol (Hover) : Illumination dorée caractéristique du menu */
+.btn:hover {
+    background: linear-gradient(to right, #2a2318, #1a150e);
+    color: #f7e7b4;
+    border-color: #c8a45c;
+    transform: translateX(6px); /* Petit décalage vers la droite typique des menus RPG */
+    box-shadow: 0 0 12px rgba(200, 164, 92, 0.2);
+}
+
+/* Icônes des choix */
+.btn-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: sepia(100%) hue-rotate(5deg) saturate(300%); /* Teinte les icônes en doré/cuivre */
+}
