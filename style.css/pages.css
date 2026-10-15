@@ -68,6 +68,15 @@ h1 {
     margin-top: 35px;
 }
 
+.btn-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0; /* Empêche l'icône de se déformer si le texte est long */
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Boutons personnalisés - Style interface de sélection Dark Souls */
 .btn {
     display: flex;
